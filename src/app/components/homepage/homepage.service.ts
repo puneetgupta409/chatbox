@@ -30,6 +30,7 @@ export class HomepageService {
   // TO STORE THE CHATGPT KEY IN SUBJECT TO USE IT
   setChatGPDKey(chatGPDKey: string): void {
     this.chatGPDKeySubject.next(chatGPDKey);
+    sessionStorage.setItem('chatGPDKey', chatGPDKey);
   }
   // TO STORE THE CHATGPT KEY IN SUBJECT TO USE IT
 

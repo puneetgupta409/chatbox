@@ -26,7 +26,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
     protected showEmojiPicker: boolean = false;
     protected messageArray: Message[] = [];
     protected visible: boolean = false;
-    protected chatGPDKey: string = '';
+    protected chatGPDKey: string | null = null;
     protected errorkey: string = '';
     protected showTyping: boolean = false;
     protected defaultMessageArray: any = [
@@ -55,6 +55,12 @@ export class HomepageComponent implements OnInit, OnDestroy {
                 this.visible = true;
             }
           });
+        if(sessionStorage.getItem('chatGPDKey')){
+            this.chatGPDKey = sessionStorage.getItem('chatGPDKey');
+            this.visible = false;
+        }   else {
+            this.visible = true;
+        }
     }
 
     // TO OPEN THE CHATBOT.
@@ -173,13 +179,14 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
     // SUBMIT THE CHATGPT KEY AND STORE IN THE STORE AND USE THE KEY.
     submitCHATGPTkey() {
-        if (this.chatGPDKey.trim() === '') {
+        if (this.chatGPDKey && this.chatGPDKey.trim() === '') {
             this.errorkey = 'Please enter a CHATGPT key';
             setTimeout(() => {
                 this.errorkey = '';
             }, 3000);
             return;
         }
+        if(this.chatGPDKey)
         this.homeService.setChatGPDKey(this.chatGPDKey);
         this.visible = false;
     }

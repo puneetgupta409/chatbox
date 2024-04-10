@@ -34,6 +34,8 @@ https://github.com/puneetgupta409/chatbox
 
 ## 2. Web Application Link:
 
+https://chatbox-8d299.web.app
+
 
 ## 3. Work Breakdown Chart: 
 <'/src/assets/requirment-plan/Water Fall Model.mvdx'>
