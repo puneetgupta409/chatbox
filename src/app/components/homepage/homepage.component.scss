@@ -1,0 +1,338 @@
+.header{
+    position: fixed;
+    z-index: 1001;
+    background-color: rgb(255, 250, 250);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+    padding: 0px 30px;
+    font-size: 1.2rem;
+    z-index: 1005;
+    color: black;
+    top: 0px;
+    height: 5rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+}
+.chatIcon{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    background-color: white;
+    border: none;
+    &:hover{
+        background-color: rgb(244 244 244);
+    }
+    @media (max-width: 600px) {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+.positionAbs{
+    position: fixed;
+    bottom: 2rem;
+    right: 10px;
+    @media (max-width: 600px) {
+        right: 1rem;
+        bottom: 1rem;
+    }
+}
+.logoClass{
+    width: 100%;
+    max-width: 176px;
+    @media (max-width: 600px) {
+        max-width: 100px;
+    }
+
+}
+.postionModalChat{
+    width: 400px;
+    min-height: 400px;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    position: fixed;
+    right: 20px;
+    bottom: 6rem;
+    padding: 1rem 1.5rem;
+    z-index: 10001;
+    @media (max-width: 768px) {
+        /* display: block; */
+        top: 4rem;
+        width: 100%;
+        right: 0px;
+        height: calc(100vh - 4rem);
+        border-radius: 0px;
+    }
+}
+.postionStaticText{
+    padding: 1rem 1.5rem;
+    right: 20px;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+    position: fixed;
+    height: auto;
+    top: 8rem;
+    width: 400px;
+    background-color: #710754;
+    color: white;
+    z-index: 10001;
+    @media (max-width: 768px) {
+        top: 0px;
+        height: 4rem;
+        align-items: end;
+        justify-content: space-between;
+        width: 100%;
+        right: 0px;
+        border-radius: 0px;
+    }
+}
+.displaySetMobile{
+    display: none;
+}
+.scrollClass{
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.scrollClass::-webkit-scrollbar {
+    display: none;
+}
+.positionBottom{
+    width: 88%;
+    position: absolute;
+    bottom: 2rem;
+}
+.backgroundSendButton{
+    background-color: #710754;
+    color: white;
+    border-radius: 8px;
+    padding: .675rem .75rem;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover{
+        background-color: #7f2f6a;
+    }
+}
+.widthHundred{
+    width: 100%;
+}
+.gapTen{
+    gap: 10px;
+}
+:host::ng-deep{
+    .form-control:focus{
+        border: 1px solid #dee2e6;
+        box-shadow: none;
+    }
+    .form-control{
+        padding: .375rem 2.24rem .375rem .75rem;
+    }
+}
+.cursor{
+    cursor: pointer;
+}
+
+.chatBox{
+    color: #710754;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.smileyClass{
+    position: absolute;
+    right: 3.5rem;
+    top: 0.35rem;
+    cursor: pointer;
+}
+:host::ng-deep .emoji-mart{
+    position: fixed;
+    bottom: 10.75rem;
+    right: 3rem;
+    z-index: 10002;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+}
+:host::ng-deep .emoji-mart-scroll{
+    height: 210px;
+}
+
+@media (max-width: 768px) {
+    .displaySet{
+        display: none !important;
+    }
+    .displaySetMobile{
+        display: flex !important;
+        justify-content: end !important;
+        align-items: center !important;
+    }
+    :host::ng-deep.emoji-mart{
+        position: absolute;
+        bottom: 2.5rem;
+        right: 1.55rem;
+        z-index: 10001;
+    }
+    :host::ng-deep.emoji-mart-scroll{
+        height: 270px;
+    }
+    .flexClass{
+        flex-direction: column;
+    }
+    .justifyChange{
+        justify-content: start;
+    }
+    .widthMobile{
+        width: 100%;
+    }
+    .paddingChange {
+        padding-left: 20px; /* Add some left padding for better readability */
+    }
+    .minWidth{
+        height: 3rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .paddingChange li {
+        word-break: break-word; /* Allow words to break across lines */
+        margin-bottom: 10px; /* Add spacing between list items */
+    }
+    .scrollClass{
+        max-height: calc(100vh - 11rem);
+    }
+    :host::ng-deep.p-dialog-mask{
+        justify-content: end;
+        align-items: end;
+    }
+}
+.widthMobile{
+    border-radius: 12px;
+}
+.justifyChange{
+    justify-content: center;
+}
+.sentClass{
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #E3F0FF;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0.5rem;
+}
+.arrow-bottom {
+    position: absolute;
+    bottom: 0px;
+    right: -11px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid  #E3F0FF; /* Arrow color */
+}
+.arrow-bottom-right{
+    position: absolute;
+    bottom: 0px;
+    left: 11px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #FEF1D4; /* Arrow color */
+}
+.marginTopSet{
+    margin-top: 80px;
+}
+.flexClass{
+    display: flex;
+}
+.paddingChange{
+    padding: 0rem 1rem 0rem 1rem !important;
+}
+.receiveClass{
+    background-color: #FEF1D4;
+    padding: 10px;
+    border-radius: 12px;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    // justify-content: end;
+}
+.minWidth{
+    min-width: 200px;
+}
+.chatText{
+    font-size: 18px;
+    font-weight: 500px;
+    color: black;
+}
+.beOneText{
+    font-size: 16px;
+    color: #aaaeb3;
+    font-weight: 400;
+}
+.defaultChat{
+    padding: 0.5rem 1rem;
+    background-color: #eae8e8;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+.textBold{
+    font-weight: 500;
+}
+.no-bullet {
+    list-style-type: none;
+    counter-reset: list;
+}
+
+.no-bullet li {
+    counter-increment: list;
+    margin-bottom: 10px; /* Optional: Add margin between list items */
+}
+
+.no-bullet li:before {
+    content: counter(list) ". ";
+    margin-right: 5px; /* Optional: Add space between number and content */
+    font-weight: bold;
+}
+ul,ol{
+    padding: 0px;
+}
+.aTag{
+    text-decoration: none;
+}
+.widthsetButton{
+    width: 200px;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+:host::ng-deep.p-toast{
+    width: 30rem !important;
+    @media (max-width: 768px) {
+        width: 85% !important;
+        z-index: 100002 !important;
+    }
+}
+.errorClass{
+    color: red;
+    font-size: 1rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: 6px;
+}
+.colorRed{
+    color: red;
+}
+.boldClass{
+    font-weight: 500;
+}
